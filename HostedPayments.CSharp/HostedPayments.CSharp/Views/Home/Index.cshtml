@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="col-sm-6">
+        <h4 class="top-title">
+            Reserve Your Tee Time Online
+        </h4>
+        <p class="top-text">Reserving your tee time online is easy and fast.</p>
+
+        <div class="row col-lg-12">
+
+            <select class="form-control">
+                <option>Select A Date</option>
+                <option>Today</option>
+                <option>Tomorrow</option>
+                <option>This Saturday</option>
+                <option>Tuesday</option>
+            </select>
+
+            <select class="form-control">
+                <option>Select A Time</option>
+                <option>Early</option>
+                <option>Late</option>
+                <option>Doesn't Matter</option>
+            </select>
+
+            <div class="row col-lg-12">
+                <div class="">
+                    <input type="button" class="btn btn-buy" onclick="location.href='/Home/Reserve';" value="Book" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+
+        <h4 class="top-title">
+            Get Some Golf Balls
+        </h4>
+
+        <p class="top-text">The Ultimate Golf Ball Service.</p>
+
+        <div class="row col-lg-12">
+
+            <select class="form-control">
+                <option>Select A Driving Range Box</option>
+                <option>Arnold Palmer</option>
+                <option>Tiger Woods</option>
+                <option>The Shark</option>
+            </select>
+
+            <select class="form-control">
+                <option>Select A Time</option>
+                <option>Early</option>
+                <option>Late</option>
+                <option>Doesn't Matter</option>
+            </select>
+
+            <select class="form-control">
+                <option>Select Golf Balls</option>
+                <option>Small Basket</option>
+                <option>Medium Basket</option>
+                <option>Large Basket</option>
+            </select>
+
+            <div class="row col-lg-12">
+                <div class="">
+                    <input type="button" class="btn btn-buy" onclick="location.href='/Home/Buy';" value="Book" />
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div> <!-- End Container -->

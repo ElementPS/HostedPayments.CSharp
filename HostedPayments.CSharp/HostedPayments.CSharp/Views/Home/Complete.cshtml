@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Complete";
+}
+
+<script>
+
+    // A more cryptic one-liner, to awe & impress.
+    //
+    // No need to protect `window` since `this` is
+    // immutable, and at the topmost level means
+    // `window` anyways. Here, we compare locations
+    // on the left side of the "&&" and execute the
+    // code in parenthesis if that condition is
+    // true (top location isn't iframe location).
+    //
+    // Otherwise, nothing happens. It's basically an
+    // if statement without wrapping curly brackets.
+    //
+    // Weird, I know. But pretty cool, right? :)
+
+    this.top.location !== this.location && (this.top.location = this.location);
+
+</script>
+
+
+
+
+<div class="container">
+
+    @*<div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail">
+            <img src="../../Content/img/henry.png" alt="" />
+            <div class="caption">
+                <h4 class="pull-right"></h4>
+                <h4>
+                    <a href="#">Handyman Henry</a>
+                </h4>
+                <p>No job too small. Henry will clean up your unfinished honey dos.</p>
+            </div>
+
+        </div>
+    </div>*@
+
+    <div class="col-lg-12 col-md-8 col-sm-12 col-xs-12">
+        <h2>Payment Response Details</h2>
+        <table class="table thumbnail">
+            <tr>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12 col-md-8 col-sm-12 col-xs-12">
+            <div class="">
+                <input type="button" class="btn btn-buy" onclick="location.href='/Home';" value="Home" />
+            </div>
+        </div>
+    </div>
+
+</div>
