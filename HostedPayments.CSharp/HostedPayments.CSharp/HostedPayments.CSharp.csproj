@@ -121,6 +121,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\ConfigurationData.cs" />
+    <Compile Include="Infrastructure\HttpSender.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -171,7 +173,6 @@
     <Content Include="Views\Home\Buy.cshtml" />
     <Content Include="Views\Home\Complete.cshtml" />
     <Content Include="Views\Home\CSS.cshtml" />
-    <Content Include="Views\Home\Reserve.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
