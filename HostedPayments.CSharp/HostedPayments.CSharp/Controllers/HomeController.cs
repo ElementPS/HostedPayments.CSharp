@@ -49,6 +49,7 @@ namespace HostedCheckout.MVC.CSharp.Controllers
                                                 new XElement(express + "TransactionSetup",
                                                     new XElement(express + "TransactionSetupMethod", "1"),
                                                     new XElement(express + "Embedded", "1"),
+                                                    new XElement(express + "AutoReturn", "1"),
                                                     new XElement(express + "ReturnURL", configurationData.ReturnURL)
                                                             )
                                                        )
