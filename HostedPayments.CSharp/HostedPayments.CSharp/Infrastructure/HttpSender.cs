@@ -7,7 +7,7 @@ using System.Net;
 using System.IO;
 using System.Text;
 
-namespace HostedCheckout.MVC.CSharp.Infrastructure
+namespace HostedPayments.CSharp.Infrastructure
 {
     public class HttpSender
     {

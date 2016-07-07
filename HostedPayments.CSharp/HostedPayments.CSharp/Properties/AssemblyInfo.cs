@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("HostedCheckout.MVC.CSharp")]
+[assembly: AssemblyTitle("HostedPayments.CSharp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("HostedCheckout.MVC.CSharp")]
+[assembly: AssemblyProduct("HostedPayments.CSharp")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a73b98ef-2dd8-4198-92d0-7bf123d9b905")]
+[assembly: Guid("d427fc8d-8c23-45b9-8cb5-b05fcb763cd5")]
 
 // Version information for an assembly consists of the following four values:
 //

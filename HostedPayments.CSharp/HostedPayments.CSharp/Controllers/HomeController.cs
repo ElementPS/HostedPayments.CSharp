@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using System.Xml;
 using System.Xml.Linq;
-using HostedCheckout.MVC.CSharp.Infrastructure;
+using HostedPayments.CSharp.Infrastructure;
 
-namespace HostedCheckout.MVC.CSharp.Controllers
+namespace HostedPayments.CSharp.Controllers
 {
     public class HomeController : Controller
     {
@@ -53,16 +53,23 @@ namespace HostedCheckout.MVC.CSharp.Controllers
                                                     new XElement(express + "ReturnURL", configurationData.ReturnURL)
                                                             )
                                                        )
-                                         );            
+                                         );
 
-            var response = new Infrastructure.HttpSender().Send(doc.ToString(), configurationData.ExpressXMLEndpoint, string.Empty);
+            try
+            {
+                var response = new Infrastructure.HttpSender().Send(doc.ToString(), configurationData.ExpressXMLEndpoint, string.Empty);
 
-            var document = XDocument.Parse(response);
-            XNamespace ns = "https://transaction.elementexpress.com";
-            XElement txnSetupId = document.Root.Element(ns + "Response").Element(ns + "Transaction").Element(ns + "TransactionSetupID");
-            var transSetupId = txnSetupId.Value;
+                var document = XDocument.Parse(response);
+                XNamespace ns = "https://transaction.elementexpress.com";
+                XElement txnSetupId = document.Root.Element(ns + "Response").Element(ns + "Transaction").Element(ns + "TransactionSetupID");
+                var transSetupId = txnSetupId.Value;
+                ViewBag.URL = "https://certtransaction.hostedpayments.com/?TransactionSetupID=" + transSetupId;
+            }
+            catch (Exception ex)
+            { 
 
-            ViewBag.URL = "https://certtransaction.hostedpayments.com/?TransactionSetupID=" + transSetupId;
+            }
+
             return View();
         }
 
@@ -73,7 +80,26 @@ namespace HostedCheckout.MVC.CSharp.Controllers
                                     string CommercialCardResponseCode, string TipAmount)
         {
 
-            return View();
+            var paymentResponse = new PaymentResponse();
+            
+            paymentResponse.HostedPaymentStatus = HostedPaymentStatus;
+            paymentResponse.TransactionSetupID = TransactionSetupID;
+            paymentResponse.TransactionID = TransactionID;
+            paymentResponse.ExpressResponseCode = ExpressResponseCode;
+            paymentResponse.ExpressResponseMessage = ExpressResponseMessage;
+            paymentResponse.AVSResponseCode = AVSResponseCode;
+            paymentResponse.CVVResponseCode = CVVResponseCode;
+            paymentResponse.ApprovalNumber = ApprovalNumber;
+            paymentResponse.LastFour = LastFour;
+            paymentResponse.ValidationCode = ValidationCode;
+            paymentResponse.CardLogo = CardLogo;
+            paymentResponse.ApprovedAmount = ApprovedAmount;
+            paymentResponse.ServicesID = ServicesID;
+            paymentResponse.PaymentAccountID = PaymentAccountID;
+            paymentResponse.CommercialCardResponseCode = CommercialCardResponseCode;
+            paymentResponse.TipAmount = TipAmount;
+
+            return View(paymentResponse);
         }
 
 

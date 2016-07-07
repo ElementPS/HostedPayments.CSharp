@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Configuration;
 
-namespace HostedCheckout.MVC.CSharp.Infrastructure
+namespace HostedPayments.CSharp.Infrastructure
 {
     public class ConfigurationData
     {

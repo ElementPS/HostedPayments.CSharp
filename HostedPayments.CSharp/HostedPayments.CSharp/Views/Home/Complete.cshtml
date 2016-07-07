@@ -1,4 +1,6 @@
-﻿@{
+﻿@model HostedPayments.CSharp.Infrastructure.PaymentResponse
+
+@{
     ViewBag.Title = "Complete";
 }
 
@@ -27,27 +29,111 @@
 
 <div class="container">
 
-    @*<div class="col-sm-4 col-lg-4 col-md-4">
-        <div class="thumbnail">
-            <img src="../../Content/img/henry.png" alt="" />
-            <div class="caption">
-                <h4 class="pull-right"></h4>
-                <h4>
-                    <a href="#">Handyman Henry</a>
-                </h4>
-                <p>No job too small. Henry will clean up your unfinished honey dos.</p>
-            </div>
-
-        </div>
-    </div>*@
-
     <div class="col-lg-12 col-md-8 col-sm-12 col-xs-12">
         <h2>Payment Response Details</h2>
         <table class="table thumbnail">
             <tr>
                 <td>
+                    <b>@Html.DisplayNameFor(model => model.ApprovalNumber)</b>
                 </td>
                 <td>
+                    @Html.DisplayFor(model => model.ApprovalNumber)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>@Html.DisplayNameFor(model => model.ApprovedAmount)</b>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ApprovedAmount)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>@Html.DisplayNameFor(model => model.AVSResponseCode)</b>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.AVSResponseCode)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>@Html.DisplayNameFor(model => model.CardLogo)</b>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.CardLogo)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>@Html.DisplayNameFor(model => model.CommercialCardResponseCode)</b>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.CommercialCardResponseCode)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>@Html.DisplayNameFor(model => model.CVVResponseCode)</b>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.CVVResponseCode)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>@Html.DisplayNameFor(model => model.ExpressResponseCode)</b>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ExpressResponseCode)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>@Html.DisplayNameFor(model => model.ExpressResponseMessage)</b>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ExpressResponseMessage)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>@Html.DisplayNameFor(model => model.HostedPaymentStatus)</b>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.HostedPaymentStatus)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>@Html.DisplayNameFor(model => model.LastFour)</b>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.LastFour)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>@Html.DisplayNameFor(model => model.PaymentAccountID)</b>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.PaymentAccountID)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>@Html.DisplayNameFor(model => model.ServicesID)</b>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ServicesID)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>@Html.DisplayNameFor(model => model.TipAmount)</b>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.TipAmount)
                 </td>
             </tr>
         </table>

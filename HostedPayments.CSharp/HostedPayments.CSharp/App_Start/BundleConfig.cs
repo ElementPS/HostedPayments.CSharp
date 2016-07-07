@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace HostedCheckout.MVC.CSharp
+namespace HostedPayments.CSharp
 {
     public class BundleConfig
     {
