@@ -50,7 +50,18 @@ namespace HostedPayments.CSharp.Controllers
                                                     new XElement(express + "TransactionSetupMethod", "1"),
                                                     new XElement(express + "Embedded", "1"),
                                                     new XElement(express + "AutoReturn", "1"),
-                                                    new XElement(express + "ReturnURL", configurationData.ReturnURL)
+                                                    new XElement(express + "ReturnURL", configurationData.ReturnURL),
+                                                    new XElement(express + "CustomCss", @"
+                                                        body{margin-left: 50px; font-family: arial; font-size: large; height: 100%; clear: left; border: none;}
+                                                        .tdHeader{border: none; background-color: transparent; font-size: large}
+                                                        .content{border: none}
+                                                        .inputText{font-size: large}
+                                                        .selectOption{font-size: large}
+                                                        .tdLabel{padding-right: 40px}
+                                                        .buttonEmbedded{color: #fff; background-color: transparent; border: 1px solid transparent; border-radius: 2px;}
+                                                        .buttonEmbedded:hover{color: #fff; background-color: #f6801a; border-color: transparent}
+                                                        .buttonCancel{color: #fff; background-color: transparent; border: 1px solid transparent; border-radius: 2px;}
+                                                        .buttonCancel:hover{color: #fff; background-color: #f6801a; border-color: transparent}")
                                                             )
                                                        )
                                          );
