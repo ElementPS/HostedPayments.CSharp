@@ -12,6 +12,12 @@ This repository demonstrates an integration to the Element Hosted Payments appli
 
 ![HostedPayments.CSharp](https://github.com/ElementPS/HostedPayments.CSharp/blob/master/screenshot1.PNG)
 
+If you are using custom css you can make your screen look like the sample utilizing the CustomCss element as seen below:
+
+![HostedPayments.CSharp](https://github.com/ElementPS/HostedPayments.CSharp/blob/master/screenshot_css.png)
+
+If you are not using the custom css, you will get the default sytling as seen below:
+
 ![HostedPayments.CSharp](https://github.com/ElementPS/HostedPayments.CSharp/blob/master/screenshot2.PNG)
 
 ![HostedPayments.CSharp](https://github.com/ElementPS/HostedPayments.CSharp/blob/master/screenshot3.PNG)
@@ -136,7 +142,7 @@ public ActionResult Complete(string HostedPaymentStatus, string TransactionSetup
 {
 
     var paymentResponse = new PaymentResponse();
-    
+
     paymentResponse.HostedPaymentStatus = HostedPaymentStatus;
     paymentResponse.TransactionSetupID = TransactionSetupID;
     paymentResponse.TransactionID = TransactionID;
