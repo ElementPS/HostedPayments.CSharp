@@ -28,7 +28,7 @@ Please contact your Integration Analyst for any questions about the prerequisite
 
 ##Step 1: Generate a request
 
-You can either generate an XML request or a SOAP request.  The Credentials and Application elements are empty below because these elements are read from the Web.config file.  When you receive an email after creating your test account the email will contain the information necessary to populate these fields in the Web.config.  The TransactionSetup request is displayed below.
+You can either generate an XML request or a SOAP request.  The Credentials and Application elements are empty below because these elements are read from the Web.config file.  When you receive an email after creating your test account the email will contain the information necessary to populate these fields in the Web.config.  If you want to customize the css, this is done inside TransactionSetup using the CustomCss element. The TransactionSetup request is displayed below.
 
 This is the XML request:
 
@@ -62,6 +62,7 @@ This is the XML request:
     <Embedded>1</Embedded>
     <AutoReturn>1</AutoReturn>
     <ReturnURL>http://localhost:51619/Home/Complete</ReturnURL>
+    <CustomCss>body{margin-left:50px;font-family:arial;font-size:large;border:none;}</CustomCss>
   </TransactionSetup>
 </TransactionSetup>
 
