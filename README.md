@@ -6,7 +6,7 @@ Integration to Element Hosted Payments using CSharp
 * **Feature request?** Open an issue.
 * Feel like **contributing**?  Submit a pull request.
 
-##Overview
+## Overview
 
 This repository demonstrates an integration to the Element Hosted Payments application using c#.  The code was compiled and tested using Microsoft Visual Studio Express 2013 for Web.  The application will open a web page allowing the user to press a button.  The button event makes a TransactionSetup request to the Express platform and then redirects to the Hosted Payments page.  After the user enters credit card details the Hosted Payments page will process the transaction and then redirect to a URL provided in the TransactionSetup that captures the results of the transaction and displays them in a web page.
 
@@ -22,17 +22,17 @@ If you are not using the custom css, you will get the default sytling as seen be
 
 ![HostedPayments.CSharp](https://github.com/ElementPS/HostedPayments.CSharp/blob/master/screenshot3.PNG)
 
-##Prerequisites
+## Prerequisites
 
 Please contact your Integration Analyst for any questions about the prerequisite below.
 
 * Create Express test account: http://www.elementps.com/Resources/Create-a-Test-Account
 
-##Documentation/Troubleshooting
+## Documentation/Troubleshooting
 
 * When you create your Express test account an email will be sent containing links to documentation.
 
-##Step 1: Generate a request
+## Step 1: Generate a request
 
 You can either generate an XML request or a SOAP request.  The Credentials and Application elements are empty below because these elements are read from the Web.config file.  When you receive an email after creating your test account the email will contain the information necessary to populate these fields in the Web.config.  If you want to customize the css, this is done inside TransactionSetup using the CustomCss element. The TransactionSetup request is displayed below.
 
@@ -74,7 +74,7 @@ This is the XML request:
 
 ```
 
-##Step 2: Send Request to the Express API
+## Step 2: Send Request to the Express API
 
 The HttpSender class is used to send the XML to the Express platform.
 
@@ -92,7 +92,7 @@ using (var stream = webRequest.GetRequestStream())
 }
 ```
 
-##Step 3: Receive response from Express API
+## Step 3: Receive response from Express API
 
 The response will be in an XML format shown below.
 
@@ -118,7 +118,7 @@ The response will be in an XML format shown below.
   </TransactionSetupResponse>
 ```
 
-##Step 4: Parse response data and redirect to Hosted Payment page
+## Step 4: Parse response data and redirect to Hosted Payment page
 
 You may parse the XML response in any manner.  One method is shown below to extract the TransactionSetupID from the XML response.  The critical value is the TransactionSetupID and you may parse it from any of the TransactionSetupID elements.  The code below shows parsing TransactionSetupID from the Transaction element.
 
@@ -129,7 +129,7 @@ XElement txnSetupId = document.Root.Element(ns + "Response").Element(ns + "Trans
 var transSetupId = txnSetupId.Value;
 ```
 
-##Step 5: Display result of transaction processing
+## Step 5: Display result of transaction processing
 
 The user will now enter credit card data into the Hosted Payments page, press submit, and Hosted Payments page will process the transaction.  Finally Hosted Payments page will post back to the URL provided in ReturnURL of TransactionSetup.  This is the method that is called when Hosted Payments POSTs back.  A model object is created (paymentResponse) to contain all of the values returned from Hosted Payments and then this object is passed along to the View for display.
 
@@ -164,7 +164,7 @@ public ActionResult Complete(string HostedPaymentStatus, string TransactionSetup
 }
 ```
 
-###©2014-2016 Element Payment Services, Inc., a Vantiv company. All Rights Reserved.
+### ©2014-2016 Element Payment Services, Inc., a Vantiv company. All Rights Reserved.
 
 Disclaimer:
 This software and all specifications and documentation contained herein or provided to you hereunder (the "Software") are provided free of charge strictly on an "AS IS" basis. No representations or warranties are expressed or implied, including, but not limited to, warranties of suitability, quality, merchantability, or fitness for a particular purpose (irrespective of any course of dealing, custom or usage of trade), and all such warranties are expressly and specifically disclaimed. Element Payment Services, Inc., a Vantiv company, shall have no liability or responsibility to you nor any other person or entity with respect to any liability, loss, or damage, including lost profits whether foreseeable or not, or other obligation for any cause whatsoever, caused or alleged to be caused directly or indirectly by the Software. Use of the Software signifies agreement with this disclaimer notice.
