@@ -2,9 +2,9 @@
 
 Integration to Element Hosted Payments using CSharp
 
-<a href="https://developer.vantiv.com/?utm_campaign=githubcta&utm_medium=hyperlink&utm_source=github&utm_content=gotquestions">Got questions? Connect with our experts on Vantiv ONE.</a>
+<a href="https://developer.vantiv.com/?utm_campaign=githubcta&utm_medium=hyperlink&utm_source=github&utm_content=gotquestions">Got questions? Connect with our experts on Worldpay ONE.</a>
 
-<a href="https://developer.vantiv.com/?utm_campaign=githubcta&utm_medium=hyperlink&utm_source=github&utm_content=codingforcommerce">Are you coding for commerce? Connect with our experts on Vantiv ONE.</a>
+<a href="https://developer.vantiv.com/?utm_campaign=githubcta&utm_medium=hyperlink&utm_source=github&utm_content=codingforcommerce">Are you coding for commerce? Connect with our experts on Worldpay ONE.</a>
 
 * Questions?  certification@elementps.com
 * **Feature request?** Open an issue.
@@ -20,7 +20,7 @@ If you are using custom css you can make your screen look like the sample utiliz
 
 ![HostedPayments.CSharp](https://github.com/ElementPS/HostedPayments.CSharp/blob/master/screenshot_css.png)
 
-If you are not using the custom css, you will get the default sytling as seen below:
+If you are not using the custom css, you will get the default styling as seen below:
 
 ![HostedPayments.CSharp](https://github.com/ElementPS/HostedPayments.CSharp/blob/master/screenshot2.PNG)
 
@@ -35,10 +35,11 @@ Please contact your Integration Analyst for any questions about the prerequisite
 ## Documentation/Troubleshooting
 
 * When you create your Express test account an email will be sent containing links to documentation.
+* **Please note:** You will need to add the credentials received via email after you created your Express test account into the Web.config file in order for the demo to work. 
 
 ## Step 1: Generate a request
 
-You can either generate an XML request or a SOAP request.  The Credentials and Application elements are empty below because these elements are read from the Web.config file.  When you receive an email after creating your test account the email will contain the information necessary to populate these fields in the Web.config.  If you want to customize the css, this is done inside TransactionSetup using the CustomCss element. The TransactionSetup request is displayed below.
+You can either generate an XML request or a SOAP request. **The Credentials and Application elements are empty below because these elements are read from the Web.config file.**  When you receive an email after creating your test account the email will contain the information necessary to populate these fields in the Web.config.  If you want to customize the css, this is done inside TransactionSetup using the CustomCss element. The TransactionSetup request is displayed below.
 
 This is the XML request:
 
@@ -168,7 +169,7 @@ public ActionResult Complete(string HostedPaymentStatus, string TransactionSetup
 }
 ```
 
-### ©2014-2016 Element Payment Services, Inc., a Vantiv company. All Rights Reserved.
+### © 2018 Worldpay, LLC and/or its affiliates. All rights reserved.
 
 Disclaimer:
 This software and all specifications and documentation contained herein or provided to you hereunder (the "Software") are provided free of charge strictly on an "AS IS" basis. No representations or warranties are expressed or implied, including, but not limited to, warranties of suitability, quality, merchantability, or fitness for a particular purpose (irrespective of any course of dealing, custom or usage of trade), and all such warranties are expressly and specifically disclaimed. Element Payment Services, Inc., a Vantiv company, shall have no liability or responsibility to you nor any other person or entity with respect to any liability, loss, or damage, including lost profits whether foreseeable or not, or other obligation for any cause whatsoever, caused or alleged to be caused directly or indirectly by the Software. Use of the Software signifies agreement with this disclaimer notice.
